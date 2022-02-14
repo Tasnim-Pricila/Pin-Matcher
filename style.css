@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section{
+    background-color: rgb(2, 2, 2);
+    height: 100vh;
+}
+.pin-matcher{
+    display: flex;
+    gap: 50px;
+    padding: 80px;
+}
+
+.pin{
+    font-size: 25px;
+    color: antiquewhite;
+    font-weight: bold;
+    background-color: rgb(64, 64, 219);
+    text-align: center;    
+    border-radius: 50%;
+    width: 200px;
+    border: 9px solid rgb(132, 123, 211);
+    padding: 50px;
+    cursor: pointer;
+    /* border: 2px solid; */
+}
+.pin:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+.left-side{
+    background-color: rgb(39, 37, 37);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.right-side{
+    background-color: rgb(39, 37, 37);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+.pin-input{
+    width: 80%;
+    display: inline-block;
+    padding: 15px;
+    background-color: rgb(78, 85, 82);
+    border: 1px solid;
+    border-color: rgb(79, 80, 82);
+    border-radius: 10px;
+    color: azure;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.numbers{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px 10px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+button{
+    font-weight: bold;
+    padding: 20px 20px;
+    font-size: 20px;
+    border-radius: 3px ;
+    cursor: pointer;
+    border-color: bisque;
+    background-color: white;
+}
+.span-four{
+    grid-column: span 4;
+    background-color: rgb(54, 51, 209);
+    color: white;
+    border: none;
+}
+.message{
+    text-align: center;
+    background-color: rgb(48, 47, 46);
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+    color: azure;
+    display: none;
+}
