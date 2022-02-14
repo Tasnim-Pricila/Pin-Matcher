@@ -36,17 +36,29 @@ document.getElementById('all-btn').addEventListener('click', function (event) {
 const submitButton = document.getElementById('submit-btn');
 const successMessage = document.getElementById('success-message');
 const errorMessage = document.getElementById('error-message');
+const emptyMessage = document.getElementById('empty-message');
 submitButton.addEventListener('click', function(){
-    if(randomInput.value == typedInput.value){
+    if (typedInput.value == ''){
+        errorMessage.style.display = 'none';
+        successMessage.style.display = 'none';
+        emptyMessage.style.display = 'block';
+        emptyMessage.style.backgroundColor = 'orange';
+        emptyMessage.style.color = 'black';
+    }
+
+    else if(randomInput.value == typedInput.value){
         // console.log('jj');
        successMessage.style.display = 'block';
        errorMessage.style.display = 'none';
+       emptyMessage.style.display = 'none';
        successMessage.style.backgroundColor = 'green';
        
     }
-    else{
+    
+    else {
         errorMessage.style.display = 'block';
         successMessage.style.display = 'none';
+        emptyMessage.style.display = 'none';
         errorMessage.style.backgroundColor = 'red';
     }
 })
